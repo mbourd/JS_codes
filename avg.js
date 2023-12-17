@@ -4,3 +4,5 @@ function avg(a,b,c) {
   console.log(a + diff / 2);
   return c < (a + diff / 2) ? a : b;
 }
+
+console.log(avg(8, 13, 11.3));
