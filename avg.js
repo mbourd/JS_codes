@@ -6,3 +6,4 @@ function avg(a,b,c) {
 }
 
 console.log(avg(8, 13, 11.3));
+console.log(avg(8, 10.8, 11.3));
