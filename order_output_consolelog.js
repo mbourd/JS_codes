@@ -1,15 +1,25 @@
-console.log('1');
+// // console.log('Hello');
+// setTimeout(() => console.log(', understanding'), 1);
+// // console.log('world');
+// Promise.all([
+//   new Promise((res) => res('Promise')).then(r => console.log(r)),
+//   new Promise((res) => res('Concept')).then(r => console.log(r))
+// ]);
+// new Promise((res) => res('of')).then((resp) => console.log(resp));
+// console.log('JavaScript');
+// Promise.race([
+//   new Promise((resolve) => setTimeout(resolve, 1000, 'priority')),
+//   new Promise((resolve) => setTimeout(resolve, 300, 'execution'))
+// ]).then(r => console.log(r));
+// setTimeout(() => console.log('order'), 1);
+// Promise.all(['micro', 'task']).then((resp) => console.log(resp));
 
-setTimeout(() => console.log('2'), 1);
+[P,st,cl]=[Promise,setTimeout,console.log];
 
-console.log('3');
+st(()=>cl('queue'),1);
 
-Promise.all([1, 2]).then((resp) => console.log(resp));
+P.all([new P(r=>r('JS')).then(r=>cl(r))]);
 
-new Promise((res, rej) => res('4')).then((resp) => console.log(resp));
+P.race([new P(r=>st(r,9,'priority')),new P(r=>st(r,3,'exec'))]).then(r=>cl(r));
 
-console.log('5');
-
-setTimeout(() => console.log('6'), 1);
-
-Promise.all([3, 4]).then((resp) => console.log(resp));
+P.all(['micro','task']).then(r=>cl(r));
